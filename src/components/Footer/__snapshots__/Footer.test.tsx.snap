@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the Footer component: footer snapshot 1`] = `
+<footer
+  class="sc-beySPh fpGIjj"
+  data-testid="footer-element"
+>
+  <section
+    class="sc-guDLey jtjpVx"
+  >
+    <div
+      class="sc-dmyCSP kdqPzO"
+    >
+      <a
+        class="sc-jTQCzO ImtPd"
+        href="#"
+      >
+        TermsPrivacyPolicy & Safety
+      </a>
+      <a
+        class="sc-jTQCzO ImtPd"
+        href="#"
+      >
+        How YouTube works
+      </a>
+      <a
+        class="sc-jTQCzO ImtPd"
+        href="#"
+      >
+        Test new features
+      </a>
+    </div>
+    <div
+      class="sc-dmyCSP kdqPzO"
+    >
+      <a
+        class="sc-jTQCzO ImtPd"
+        href="#"
+      >
+        About
+      </a>
+      <a
+        class="sc-jTQCzO ImtPd"
+        href="#"
+      >
+        Press
+      </a>
+      <a
+        class="sc-jTQCzO ImtPd"
+        href="#"
+      >
+        Copyright
+      </a>
+      <a
+        class="sc-jTQCzO ImtPd"
+        href="#"
+      >
+        Contact us
+      </a>
+      <a
+        class="sc-jTQCzO ImtPd"
+        href="#"
+      >
+        Creators
+      </a>
+      <a
+        class="sc-jTQCzO ImtPd"
+        href="#"
+      >
+        Advertise
+      </a>
+      <a
+        class="sc-jTQCzO ImtPd"
+        href="#"
+      >
+        Developers
+      </a>
+    </div>
+    <div
+      class="sc-hLQSwg eA-DLFL"
+    >
+      <a
+        class="sc-jTQCzO ImtPd"
+        href="#"
+      >
+        <linkedin.svg />
+      </a>
+      <a
+        class="sc-jTQCzO ImtPd"
+        href="#"
+      >
+        <facebook.svg />
+      </a>
+      <a
+        class="sc-jTQCzO ImtPd"
+        href="#"
+      >
+        <instagram.svg />
+      </a>
+      <a
+        class="sc-jTQCzO ImtPd"
+        href="#"
+      >
+        <twitter.svg />
+      </a>
+    </div>
+  </section>
+  <section
+    class="sc-eDLKkx bZCbxg"
+  >
+    2023 Modsen company
+  </section>
+</footer>
+`;
