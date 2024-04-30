@@ -1,16 +1,23 @@
+import {
+  BASE_URL,
+  SEARCH_BY_GENRE_PATH,
+  SEARCH_BY_ID_PATH,
+  SEARCH_BY_NAME_PATH,
+  X_API_KEY,
+} from '@constants/apiConstant';
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { IGetMovieByIdRequest, IGetMoviesRequest } from 'src/types/requestTypes';
 import { IGetMovieByIdResponse, IGetMoviesResponse } from 'src/types/responseTypes';
 
 const prepareHeadersConf = (headers: Headers) => {
   headers.set('accept', 'application/json');
-  headers.set('X-API-KEY', 'BHHGG58-1VHMFRG-GNC0P54-16A61X6');
+  headers.set('X-API-KEY', X_API_KEY);
   return headers;
 };
 export const movieApi = createApi({
   reducerPath: 'filmsApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: ' https://api.kinopoisk.dev/v1.4/',
+    baseUrl: BASE_URL,
     prepareHeaders: prepareHeadersConf,
   }),
   keepUnusedDataFor: 60,
@@ -18,16 +25,20 @@ export const movieApi = createApi({
     getMovies: build.query<IGetMoviesResponse, IGetMoviesRequest>({
       query: ({ pageNum, genre, movie_name }: IGetMoviesRequest) => {
         if (movie_name) {
-          return `movie/search?page=${pageNum}&limit=16&query=${encodeURI(movie_name)}`;
+          return SEARCH_BY_NAME_PATH(pageNum, movie_name, 16);
         }
-        return `movie?page=${pageNum}&limit=16&selectFields=id&selectFields=name&selectFields=alternativeName&selectFields=year&selectFields=poster&selectFields=genres&type=movie${genre !== 'all' ? `&genres.name=${encodeURI(genre)}` : ''}`;
+        return SEARCH_BY_GENRE_PATH(pageNum, genre, 16);
       },
       keepUnusedDataFor: 30,
     }),
     getMovieById: build.query<IGetMovieByIdResponse, IGetMovieByIdRequest>({
-      query: (movieId: IGetMovieByIdRequest) => `movie/${movieId}`,
+      query: (movieId: IGetMovieByIdRequest) => SEARCH_BY_ID_PATH(movieId),
+    }),
+    getMovieNames: build.query<IGetMoviesResponse, { movie_name: string }>({
+      query: ({ movie_name }) => SEARCH_BY_NAME_PATH(1, movie_name, 10),
     }),
   }),
 });
 
-export const { useLazyGetMovieByIdQuery, useLazyGetMoviesQuery } = movieApi;
+export const { useLazyGetMovieByIdQuery, useLazyGetMoviesQuery, useLazyGetMovieNamesQuery } =
+  movieApi;
