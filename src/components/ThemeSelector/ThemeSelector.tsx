@@ -11,7 +11,7 @@ export function ThemeSelector({ setThemFunc, ...props }: ThemeSelectorProps) {
         light: state.dark,
         medium: state.medium,
         primary: state.primary,
-        primaty_hover: state.primaty_hover,
+        primary_hover: state.primary_hover,
         text_dark: state.text_light,
         text_hover: state.text_hover,
         text_light: state.text_dark,

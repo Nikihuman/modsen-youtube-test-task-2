@@ -1,3 +1,4 @@
+import { GENRES } from '@constants/genres';
 import { useLazyGetMoviesQuery } from '@store/moviesApi';
 import { ReactNode, createContext, useEffect, useState } from 'react';
 import { IGetMoviesRequest } from 'src/types/requestTypes';
@@ -21,11 +22,11 @@ export function MovieContextProvider({ children }: { children: ReactNode }) {
     movie_name: string | undefined;
   }>({
     pageNum: 1,
-    genre: 'all',
+    genre: GENRES[0].name,
     movie_name: undefined,
   });
   const [moviesInfo, setMoviesInfo] = useState<IMovieInfo[]>([]);
-  const [getMoviesQuery, { data, isFetching, originalArgs }] = useLazyGetMoviesQuery({});
+  const [getMoviesQuery, { data, isFetching, originalArgs }] = useLazyGetMoviesQuery();
 
   useEffect(() => {
     if (

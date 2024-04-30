@@ -1,14 +1,14 @@
 import { NavBar } from '@components/NavBar/NavBar';
-import { Global, StyledMainPage, StyledMessage } from './Styled';
+import { Global, StyledButton, StyledMainPage, StyledMessage } from './Styled';
 import { Footer } from '@components/Footer/Footer';
 import { ThemeProvider } from 'styled-components';
 import { ITheme, THEME } from '@constants/theme';
 import { useCallback, useContext, useState } from 'react';
 import { MoviesGrid } from '@components/MoviesGrid/MoviesGrid';
-import { Button } from '@components/Button/Button';
 import { ErrorBoundary } from '@components/ErrorBoundary/ErrorBoundary';
 import { MovieContext } from '@context/movie.context';
 import { ModalWindow } from '@components/ModalWindow/ModalWindow';
+import { INFO_MESSAGES } from '@constants/infoMessages';
 
 export function MainPage() {
   const [theme, setTheme] = useState<ITheme>(THEME);
@@ -33,12 +33,10 @@ export function MainPage() {
         <NavBar setTheme={setTheme} />
         <ErrorBoundary>
           {movies.length === 0 && !isFetching ? (
-            <StyledMessage>{`We can't find any results by your request😢`}</StyledMessage>
+            <StyledMessage>{INFO_MESSAGES.movieSearch}</StyledMessage>
           ) : null}
           <MoviesGrid movieIdStateController={movieIdStateController}></MoviesGrid>
-          <Button style={{ margin: '50px auto' }} onClick={showMore}>
-            Show more
-          </Button>
+          <StyledButton onClick={showMore}>Show more</StyledButton>
           <Footer />
         </ErrorBoundary>
       </StyledMainPage>

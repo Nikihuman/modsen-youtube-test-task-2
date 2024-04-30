@@ -26,7 +26,7 @@ export const StyledMoviesNames = styled.section`
   position: absolute;
   width: 100%;
   top: 50px;
-  min-height: 100px;
+  min-height: 50px;
   max-height: 300px;
   display: none;
   z-index: 4;

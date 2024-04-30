@@ -1,14 +1,14 @@
 export const THEME: ITheme = {
-  primary: '#FF8A00',
-  primaty_hover: '#c46c07',
-  text_light: '#FFFFFF',
-  text_dark: 'rgb(0, 0, 0)',
-  text_hover: '#b7b5b5',
-  dark: '#383838',
-  medium: '#b7b7b7',
+  primary: 'rgba(255, 138, 0, 1)',
+  primary_hover: 'rgba(196, 108, 7, 1)',
+  text_light: 'rgba(255, 255, 255, 1)',
+  text_dark: 'rgba(0, 0, 0, 1)',
+  text_hover: 'rgba(183, 181, 181, 1)',
+  dark: 'rgba(56, 56, 56, 1)',
+  medium: 'rgba(183, 183, 183, 1)',
   border_dark: 'rgba(0, 0, 0, 0.1)',
-  border_light: '#FFFFFF',
-  light: '#f2f2f2',
+  border_light: 'rgba(255, 255, 255, 1)',
+  light: 'rgba(242, 242, 242, 1)',
   media: {
     big_tablet: '(max-width: 1440px)',
     tablet: '(max-width: 1080px)',
@@ -27,7 +27,7 @@ export interface ITheme {
   border_light: string;
   border_dark: string;
   primary: string;
-  primaty_hover: string;
+  primary_hover: string;
   dark: string;
   medium: string;
   light: string;

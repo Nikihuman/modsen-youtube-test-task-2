@@ -22,7 +22,7 @@ export interface Genre {
 }
 
 export interface Poster {
-  url: string;
+  url: string | undefined;
   previewUrl: string;
 }
 
@@ -186,11 +186,6 @@ export interface Fact {
   value: string;
   type: string;
   spoiler: boolean;
-}
-
-export interface Poster {
-  url: string;
-  previewUrl: string;
 }
 
 export interface Premiere {

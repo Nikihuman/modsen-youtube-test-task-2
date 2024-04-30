@@ -7,6 +7,7 @@ import { MovieContext } from '@context/movie.context';
 
 export function MoviesGrid({ movieIdStateController, ...props }: MoviesGridProps) {
   const { movies, isFetching } = useContext(MovieContext);
+
   return (
     <StyledMoviesGrid {...props}>
       {movies.length != 0

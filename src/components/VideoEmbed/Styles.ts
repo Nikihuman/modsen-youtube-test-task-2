@@ -1,4 +1,5 @@
 import { Button } from '@components/Button/Button';
+import { Ripple } from '@components/Ripple/Ripple';
 import { css, styled } from 'styled-components';
 
 export const StyledVideoEmbed = styled.div`
@@ -50,4 +51,12 @@ export const VideoSelectorWrapper = styled.div`
   @media ${props => props.theme['media']['extra_small']} {
     justify-content: center;
   }
+`;
+
+export const StyledRipple = styled(Ripple)`
+  margin: auto;
+`;
+
+export const StyledInfo = styled.div`
+  font-size: 16px;
 `;
