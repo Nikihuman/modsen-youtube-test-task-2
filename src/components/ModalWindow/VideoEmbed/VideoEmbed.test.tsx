@@ -1,11 +1,13 @@
-import { render, screen } from '@testing-library/react';
-import { VideoEmbed } from './VideoEmbed';
 import '@testing-library/jest-dom';
-import { ThemeProvider } from 'styled-components';
-import { THEME } from '../../constants/theme';
-import { Provider } from 'react-redux';
+
 import { store } from '@store/store';
+import { render, screen } from '@testing-library/react';
+import { Provider } from 'react-redux';
 import { Videos } from 'src/types/responseTypes';
+import { ThemeProvider } from 'styled-components';
+
+import { THEME } from '../../../constants/theme';
+import { VideoEmbed } from './VideoEmbed';
 
 describe('Testing the VideoEmbed component', () => {
   test('VideoEmbed component should be in document', () => {

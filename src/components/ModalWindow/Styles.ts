@@ -1,5 +1,7 @@
-import { css, styled } from 'styled-components';
 import DefautlAvatar from '@assets/images/default_avatar.svg';
+import { Button } from '@components/Button/Button';
+import { Ripple } from '@components/Ripple/Ripple';
+import { css, styled } from 'styled-components';
 
 export const ModalWindowWrapper = styled.div<{ $active: boolean }>`
   position: fixed;
@@ -79,4 +81,21 @@ export const StyledDescription = styled.div`
   font-weight: 500;
 `;
 
+export const StyledDirectorInfo = styled.div`
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+`;
+
 export const StyledParagraph = styled.p``;
+
+export const StyledRipple = styled(Ripple)`
+  margin: auto;
+`;
+
+export const StyledButton = styled(Button)`
+  position: absolute;
+  top: 15px;
+  right: 15px;
+`;

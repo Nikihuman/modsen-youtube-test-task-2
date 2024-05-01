@@ -1,8 +1,10 @@
-import { render, screen } from '@testing-library/react';
-import { Logo } from './Logo';
 import '@testing-library/jest-dom';
+
+import { render, screen } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
-import { THEME } from '../../constants/theme';
+
+import { THEME } from '../../../constants/theme';
+import { Logo } from './Logo';
 
 test('Testing the Link component', () => {
   render(

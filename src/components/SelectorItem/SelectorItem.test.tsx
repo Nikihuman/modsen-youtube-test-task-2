@@ -1,12 +1,14 @@
-import { render, screen } from '@testing-library/react';
-import { SelectorItem } from './SelectorItem';
 import '@testing-library/jest-dom';
-import { ThemeProvider } from 'styled-components';
-import { THEME } from '../../constants/theme';
-import { Provider } from 'react-redux';
-import { store } from '@store/store';
-import { MovieContextProvider } from '@context/movie.context';
+
 import { GENRES } from '@constants/genres';
+import { MovieContextProvider } from '@context/movie.context';
+import { store } from '@store/store';
+import { render, screen } from '@testing-library/react';
+import { Provider } from 'react-redux';
+import { ThemeProvider } from 'styled-components';
+
+import { THEME } from '../../constants/theme';
+import { SelectorItem } from './SelectorItem';
 
 describe('Testing the SelectorItem component', () => {
   test('SelectorItem component should be in document', () => {

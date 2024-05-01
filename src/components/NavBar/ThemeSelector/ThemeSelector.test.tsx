@@ -1,11 +1,13 @@
-import { render, renderHook, screen } from '@testing-library/react';
-import { ThemeSelector } from './ThemeSelector';
 import '@testing-library/jest-dom';
-import { ThemeProvider } from 'styled-components';
-import { ITheme, THEME } from '../../constants/theme';
-import { Provider } from 'react-redux';
+
 import { store } from '@store/store';
+import { render, renderHook, screen } from '@testing-library/react';
 import React from 'react';
+import { Provider } from 'react-redux';
+import { ThemeProvider } from 'styled-components';
+
+import { ITheme, THEME } from '../../../constants/theme';
+import { ThemeSelector } from './ThemeSelector';
 
 describe('Testing the ThemeSelector component', () => {
   test('ThemeSelector component should be in document', () => {

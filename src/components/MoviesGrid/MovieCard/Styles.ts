@@ -1,5 +1,6 @@
-import styled, { css } from 'styled-components';
+import Icon from '@assets/images/youtube.svg';
 import { SelectorItem } from '@components/SelectorItem/SelectorItem';
+import styled, { css } from 'styled-components';
 
 export const StyledMovieCard = styled.div`
   position: relative;
@@ -43,7 +44,7 @@ export const StyledMovieImageWrapper = styled.div`
   align-items: center;
   border: none;
   box-sizing: border-box;
-  box-shadow: 0px 0px 10px ${props => props.theme['text_dark']};
+  border-right: 1px solid ${props => props.theme['border_dark']};
   @media ${props => props.theme['media']['extra_small']} {
     height: 124px;
     min-width: 83px;
@@ -115,4 +116,14 @@ export const StyledSelectorItem = styled(SelectorItem)`
     padding: 2px 4px;
     margin: 1px 3px;
   }
+`;
+
+export const StyledDefaultLogo = styled(Icon)<{ $isLoaded: boolean }>`
+  width: 60px;
+  height: 45px;
+  ${props =>
+    props.$isLoaded &&
+    css`
+      display: none;
+    `}
 `;

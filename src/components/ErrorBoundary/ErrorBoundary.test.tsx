@@ -1,8 +1,10 @@
-import { render, screen } from '@testing-library/react';
-import { ErrorBoundary } from './ErrorBoundary';
 import '@testing-library/jest-dom';
+
+import { render, screen } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
+
 import { THEME } from '../../constants/theme';
+import { ErrorBoundary } from './ErrorBoundary';
 
 test('Testing the ErrorBoundary component', () => {
   const ThrowError = () => {

@@ -1,4 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
+
 import { movieApi } from './moviesApi';
 
 export const store = configureStore({
