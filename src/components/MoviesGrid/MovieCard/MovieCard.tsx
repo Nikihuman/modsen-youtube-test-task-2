@@ -1,4 +1,6 @@
+import { COUNT_OF_GENRES_IN_MOVIE_CARD } from '@constants/others';
 import { useState } from 'react';
+
 import { MovieCardProps } from './MovieCard.props';
 import {
   StyledDefaultLogo,
@@ -11,7 +13,6 @@ import {
   StyledMovieName,
   StyledSelectorItem,
 } from './Styles';
-import { COUNT_OF_GENRES_IN_MOVIE_CARD } from '@constants/others';
 
 export function MovieCard({ info, setMovieId, ...props }: MovieCardProps) {
   const [isLoaded, setIsLoaded] = useState(false);

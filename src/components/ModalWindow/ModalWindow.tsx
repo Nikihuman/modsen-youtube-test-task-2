@@ -1,4 +1,9 @@
+import { VideoEmbed } from '@components/ModalWindow/VideoEmbed/VideoEmbed';
+import { INFO_MESSAGES } from '@constants/infoMessages';
+import { PROFESSIONS } from '@constants/others';
+import { useLazyGetMovieByIdQuery } from '@store/moviesApi';
 import { useEffect, useMemo } from 'react';
+
 import { ModalWindowProps } from './ModalWindow.props';
 import {
   ModalWindowWrapper,
@@ -13,10 +18,6 @@ import {
   StyledParagraph,
   StyledRipple,
 } from './Styles';
-import { useLazyGetMovieByIdQuery } from '@store/moviesApi';
-import { VideoEmbed } from '@components/ModalWindow/VideoEmbed/VideoEmbed';
-import { PROFESSIONS } from '@constants/others';
-import { INFO_MESSAGES } from '@constants/infoMessages';
 
 export function ModalWindow({ movieIdStateController, ...props }: ModalWindowProps) {
   const [getMovieByIdQuery, { data, isFetching }] = useLazyGetMovieByIdQuery();

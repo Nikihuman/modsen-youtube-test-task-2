@@ -1,8 +1,9 @@
+import { ITheme, THEME_KEY } from '@constants/theme';
+import { saveState } from '@store/storage';
 import { useCallback } from 'react';
+
 import { StyledThemeSelector, ThemeSelectorWrapper } from './Styles';
 import { ThemeSelectorProps } from './ThemeSelector.props';
-import { saveState } from '@store/storage';
-import { ITheme, THEME_KEY } from '@constants/theme';
 
 export function ThemeSelector({ setThemFunc, ...props }: ThemeSelectorProps) {
   const changeTheme = useCallback(() => {

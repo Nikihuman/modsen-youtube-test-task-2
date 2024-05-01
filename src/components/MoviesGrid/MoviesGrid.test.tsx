@@ -1,12 +1,14 @@
-import { render, renderHook, screen } from '@testing-library/react';
-import { MoviesGrid } from './MoviesGrid';
 import '@testing-library/jest-dom';
-import { ThemeProvider } from 'styled-components';
-import { THEME } from '../../constants/theme';
-import React from 'react';
+
 import { MovieContextProvider } from '@context/movie.context';
 import { store } from '@store/store';
+import { render, renderHook, screen } from '@testing-library/react';
+import React from 'react';
 import { Provider } from 'react-redux';
+import { ThemeProvider } from 'styled-components';
+
+import { THEME } from '../../constants/theme';
+import { MoviesGrid } from './MoviesGrid';
 
 test('Testing the MoviesGrid component', () => {
   const movieIdStateController = renderHook(() => {

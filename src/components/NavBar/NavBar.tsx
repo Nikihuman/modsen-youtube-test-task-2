@@ -1,17 +1,18 @@
-import {
-  StyledNavBar,
-  StyledMainSection,
-  StyledGenreUl,
-  StyledScrollButton,
-  StyledGenreSection,
-} from './Styled';
-import { Search } from '@components/NavBar/Search/Search';
 import { Logo } from '@components/NavBar/Logo/Logo';
+import { Search } from '@components/NavBar/Search/Search';
 import { ThemeSelector } from '@components/NavBar/ThemeSelector/ThemeSelector';
-import { NavBarProps } from './NavBar.props';
+import { SelectorItem } from '@components/SelectorItem/SelectorItem';
 import { GENRES } from '@constants/genres';
 import { useCallback, useRef } from 'react';
-import { SelectorItem } from '@components/SelectorItem/SelectorItem';
+
+import { NavBarProps } from './NavBar.props';
+import {
+  StyledGenreSection,
+  StyledGenreUl,
+  StyledMainSection,
+  StyledNavBar,
+  StyledScrollButton,
+} from './Styled';
 
 export function NavBar({ setTheme, ...props }: NavBarProps) {
   const ulRef = useRef<HTMLUListElement>(null);

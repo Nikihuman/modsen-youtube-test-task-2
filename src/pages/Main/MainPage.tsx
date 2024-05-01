@@ -1,15 +1,16 @@
-import { NavBar } from '@components/NavBar/NavBar';
-import { Global, StyledButton, StyledMainPage, StyledMessage } from './Styled';
-import { Footer } from '@components/Footer/Footer';
-import { ThemeProvider } from 'styled-components';
-import { ITheme, THEME, THEME_KEY } from '@constants/theme';
-import { useCallback, useContext, useState } from 'react';
-import { MoviesGrid } from '@components/MoviesGrid/MoviesGrid';
 import { ErrorBoundary } from '@components/ErrorBoundary/ErrorBoundary';
-import { MovieContext } from '@context/movie.context';
+import { Footer } from '@components/Footer/Footer';
 import { ModalWindow } from '@components/ModalWindow/ModalWindow';
+import { MoviesGrid } from '@components/MoviesGrid/MoviesGrid';
+import { NavBar } from '@components/NavBar/NavBar';
 import { INFO_MESSAGES } from '@constants/infoMessages';
+import { ITheme, THEME, THEME_KEY } from '@constants/theme';
+import { MovieContext } from '@context/movie.context';
 import { loadState } from '@store/storage';
+import { useCallback, useContext, useState } from 'react';
+import { ThemeProvider } from 'styled-components';
+
+import { Global, StyledButton, StyledMainPage, StyledMessage } from './Styled';
 
 export function MainPage() {
   const [theme, setTheme] = useState<ITheme>(THEME);

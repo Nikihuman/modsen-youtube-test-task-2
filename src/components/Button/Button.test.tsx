@@ -1,8 +1,10 @@
-import { render, screen } from '@testing-library/react';
-import { Button } from './Button';
 import '@testing-library/jest-dom';
+
+import { THEME } from '@constants/theme';
+import { render, screen } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
-import { THEME } from '../../constants/theme';
+
+import { Button } from './Button';
 
 test('Testing the Button component', () => {
   render(

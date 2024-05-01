@@ -1,12 +1,14 @@
-import { render, renderHook, screen } from '@testing-library/react';
-import { NavBar } from './NavBar';
 import '@testing-library/jest-dom';
-import { ThemeProvider } from 'styled-components';
-import { ITheme, THEME, THEME_KEY } from '../../constants/theme';
-import React from 'react';
+
 import { loadState } from '@store/storage';
-import { Provider } from 'react-redux';
 import { store } from '@store/store';
+import { render, renderHook, screen } from '@testing-library/react';
+import React from 'react';
+import { Provider } from 'react-redux';
+import { ThemeProvider } from 'styled-components';
+
+import { ITheme, THEME, THEME_KEY } from '../../constants/theme';
+import { NavBar } from './NavBar';
 
 describe('Testing the NavBar component', () => {
   test('MovieCard component should be in document', () => {

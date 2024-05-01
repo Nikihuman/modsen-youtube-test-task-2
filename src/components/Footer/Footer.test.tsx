@@ -1,9 +1,11 @@
-import { render, screen } from '@testing-library/react';
-import { Footer } from './Footer';
 import '@testing-library/jest-dom';
+
+import { render, screen } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
-import { THEME } from '../../constants/theme';
+
 import { FIRST_BLOCK, SECOND_BLOCK, SOCIAL_MEDIA } from '../../constants/footersLinks';
+import { THEME } from '../../constants/theme';
+import { Footer } from './Footer';
 
 test('Testing the Footer component', () => {
   render(

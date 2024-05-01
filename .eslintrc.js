@@ -26,7 +26,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint', 'react'],
+  plugins: ['@typescript-eslint', 'react', 'simple-import-sort', 'import'],
   rules: {
     'prettier/prettier': [
       'warn',
@@ -34,5 +34,10 @@ module.exports = {
         endOfLine: 'auto',
       },
     ],
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
+    'import/first': 'error',
+    'import/newline-after-import': 'error',
+    'import/no-duplicates': 'error',
   },
 };

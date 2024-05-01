@@ -1,7 +1,7 @@
-import { css, styled } from 'styled-components';
 import DefautlAvatar from '@assets/images/default_avatar.svg';
-import { Ripple } from '@components/Ripple/Ripple';
 import { Button } from '@components/Button/Button';
+import { Ripple } from '@components/Ripple/Ripple';
+import { css, styled } from 'styled-components';
 
 export const ModalWindowWrapper = styled.div<{ $active: boolean }>`
   position: fixed;
