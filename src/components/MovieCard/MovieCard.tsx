@@ -25,6 +25,7 @@ export function MovieCard({ info, setMovieId, ...props }: MovieCardProps) {
       />
       <StyledMovieImageWrapper>
         <StyledMovieImage
+          alt={`${info.alternativeName ?? info.name} poster`}
           $isLoaded={isLoaded}
           src={info.poster.url}
           onLoad={() => {
@@ -34,10 +35,10 @@ export function MovieCard({ info, setMovieId, ...props }: MovieCardProps) {
         <StyledDefaultLogo $isLoaded={isLoaded} />
       </StyledMovieImageWrapper>
       <StyledMovieInfo>
-        <StyledMovieName>
+        <StyledMovieName data-test-id="movie-name-id">
           {info.alternativeName ?? info.name} &#183; {info.year}
         </StyledMovieName>
-        <StyledMovieGenres>
+        <StyledMovieGenres data-test-id="movie-genres-id">
           {info.genres.map((el, i) =>
             i < COUNT_OF_GENRES_IN_MOVIE_CARD ? (
               <StyledSelectorItem genre_name={el.name} key={el.name}>

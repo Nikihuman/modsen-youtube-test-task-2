@@ -20,6 +20,8 @@ export const THEME: ITheme = {
   },
 };
 
+export const THEME_KEY = 'THEME';
+
 export interface ITheme {
   text_light: string;
   text_dark: string;
