@@ -1,6 +1,6 @@
 import { GENRES } from '@constants/genres';
 import { useLazyGetMoviesQuery } from '@store/moviesApi';
-import { ReactNode, createContext, useEffect, useState } from 'react';
+import { createContext, ReactNode, useEffect, useState } from 'react';
 import { IGetMoviesRequest } from 'src/types/requestTypes';
 import { IMovieInfo } from 'src/types/responseTypes';
 

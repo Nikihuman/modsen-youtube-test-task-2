@@ -1,6 +1,10 @@
+import { INFO_MESSAGES } from '@constants/infoMessages';
+import { MovieContext } from '@context/movie.context';
+import { useLazyGetMovieNamesQuery } from '@store/moviesApi';
 import { FormEvent, useCallback, useContext, useState } from 'react';
-import { SearchProps } from './Search.props';
+
 import { MovieShortInfo } from './MovieShortInfo/MovieShortInfo';
+import { SearchProps } from './Search.props';
 import {
   StyledInfo,
   StyledInput,
@@ -11,9 +15,6 @@ import {
   StyledSubmitButton,
   StyledUl,
 } from './Styles';
-import { MovieContext } from '@context/movie.context';
-import { useLazyGetMovieNamesQuery } from '@store/moviesApi';
-import { INFO_MESSAGES } from '@constants/infoMessages';
 
 export function Search({ placeholder, ...props }: SearchProps) {
   const { setQueryParams } = useContext(MovieContext);

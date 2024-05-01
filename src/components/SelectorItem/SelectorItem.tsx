@@ -1,7 +1,8 @@
+import { MovieContext } from '@context/movie.context';
 import { useCallback, useContext } from 'react';
+
 import { SelectorItemProps } from './SelectorItem.props';
 import { StyledSelectorItem } from './Styles';
-import { MovieContext } from '@context/movie.context';
 
 export function SelectorItem({ children, genre_name, ...props }: SelectorItemProps) {
   const { setQueryParams, originalArgs } = useContext(MovieContext);

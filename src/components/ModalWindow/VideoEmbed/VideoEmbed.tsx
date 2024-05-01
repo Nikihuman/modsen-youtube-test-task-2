@@ -1,4 +1,6 @@
+import { INFO_MESSAGES } from '@constants/infoMessages';
 import { useEffect, useMemo, useState } from 'react';
+
 import {
   StyledIframe,
   StyledInfo,
@@ -8,7 +10,6 @@ import {
   VideoSelectorWrapper,
 } from './Styles';
 import { VideoEmbedProps } from './VideoEmbed.props';
-import { INFO_MESSAGES } from '@constants/infoMessages';
 
 export function VideoEmbed({ sources, isActive, ...props }: VideoEmbedProps) {
   const [currentSource, setCurrentSource] = useState<null | string>(null);

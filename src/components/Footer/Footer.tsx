@@ -1,4 +1,7 @@
+import { Link } from '@components/Footer/Link/Link';
 import { FIRST_BLOCK, SECOND_BLOCK, SOCIAL_MEDIA } from '@constants/footersLinks';
+
+import { FooterProps } from './Footer.props';
 import {
   StyledCompanyName,
   StyledFooter,
@@ -6,8 +9,6 @@ import {
   StyledLinksWrapper,
   StyledSocialLinksBlock,
 } from './Styles';
-import { Link } from '@components/Footer/Link/Link';
-import { FooterProps } from './Footer.props';
 
 export function Footer({ ...props }: FooterProps) {
   return (

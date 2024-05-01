@@ -1,6 +1,6 @@
-import styled from 'styled-components';
 import Icon from '@assets/images/loupe.svg';
 import { Ripple } from '@components/Ripple/Ripple';
+import styled from 'styled-components';
 
 export const StyledSearchWrapper = styled.form`
   display: flex;

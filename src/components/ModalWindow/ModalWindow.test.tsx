@@ -1,11 +1,13 @@
-import { render, screen, renderHook } from '@testing-library/react';
-import { ModalWindow } from './ModalWindow';
 import '@testing-library/jest-dom';
-import { ThemeProvider } from 'styled-components';
-import { THEME } from '../../constants/theme';
+
+import { store } from '@store/store';
+import { render, renderHook, screen } from '@testing-library/react';
 import React from 'react';
 import { Provider } from 'react-redux';
-import { store } from '@store/store';
+import { ThemeProvider } from 'styled-components';
+
+import { THEME } from '../../constants/theme';
+import { ModalWindow } from './ModalWindow';
 
 describe('Testing the ModalWindow component', () => {
   test('ModalWindow component should have display: none', () => {

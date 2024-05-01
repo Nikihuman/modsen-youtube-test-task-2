@@ -2,103 +2,103 @@
 
 exports[`Testing the Footer component: footer snapshot 1`] = `
 <footer
-  class="sc-beySPh fpGIjj"
+  class="sc-guDLey lyUZs"
   data-testid="footer-element"
 >
   <section
-    class="sc-guDLey jtjpVx"
+    class="sc-dmyCSP bZlFyv"
   >
     <div
-      class="sc-dmyCSP kdqPzO"
+      class="sc-hLQSwg iTwjgc"
     >
       <a
-        class="sc-jTQCzO erxcur"
+        class="sc-beySPh boPakf"
         href="#"
       >
         TermsPrivacyPolicy & Safety
       </a>
       <a
-        class="sc-jTQCzO erxcur"
+        class="sc-beySPh boPakf"
         href="#"
       >
         How YouTube works
       </a>
       <a
-        class="sc-jTQCzO erxcur"
+        class="sc-beySPh boPakf"
         href="#"
       >
         Test new features
       </a>
     </div>
     <div
-      class="sc-dmyCSP kdqPzO"
+      class="sc-hLQSwg iTwjgc"
     >
       <a
-        class="sc-jTQCzO erxcur"
+        class="sc-beySPh boPakf"
         href="#"
       >
         About
       </a>
       <a
-        class="sc-jTQCzO erxcur"
+        class="sc-beySPh boPakf"
         href="#"
       >
         Press
       </a>
       <a
-        class="sc-jTQCzO erxcur"
+        class="sc-beySPh boPakf"
         href="#"
       >
         Copyright
       </a>
       <a
-        class="sc-jTQCzO erxcur"
+        class="sc-beySPh boPakf"
         href="#"
       >
         Contact us
       </a>
       <a
-        class="sc-jTQCzO erxcur"
+        class="sc-beySPh boPakf"
         href="#"
       >
         Creators
       </a>
       <a
-        class="sc-jTQCzO erxcur"
+        class="sc-beySPh boPakf"
         href="#"
       >
         Advertise
       </a>
       <a
-        class="sc-jTQCzO erxcur"
+        class="sc-beySPh boPakf"
         href="#"
       >
         Developers
       </a>
     </div>
     <div
-      class="sc-hLQSwg eA-DLFL"
+      class="sc-eDLKkx dhTFsk"
     >
       <a
-        class="sc-jTQCzO erxcur"
+        class="sc-beySPh boPakf"
         href="#"
       >
         <linkedin.svg />
       </a>
       <a
-        class="sc-jTQCzO erxcur"
+        class="sc-beySPh boPakf"
         href="#"
       >
         <facebook.svg />
       </a>
       <a
-        class="sc-jTQCzO erxcur"
+        class="sc-beySPh boPakf"
         href="#"
       >
         <instagram.svg />
       </a>
       <a
-        class="sc-jTQCzO erxcur"
+        class="sc-beySPh boPakf"
         href="#"
       >
         <twitter.svg />
@@ -106,7 +106,7 @@ exports[`Testing the Footer component: footer snapshot 1`] = `
     </div>
   </section>
   <section
-    class="sc-eDLKkx cXnbja"
+    class="sc-jTQCzO fIXjCO"
   >
     2023 Modsen company
   </section>

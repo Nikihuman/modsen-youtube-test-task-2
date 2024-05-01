@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import Icon from '@assets/images/youtube.svg';
+import styled from 'styled-components';
 
 export const StyledLogo = styled.div`
   display: flex;

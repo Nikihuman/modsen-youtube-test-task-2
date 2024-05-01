@@ -1,10 +1,12 @@
-import { render, screen, renderHook } from '@testing-library/react';
-import { MovieCard } from './MovieCard';
 import '@testing-library/jest-dom';
-import { ThemeProvider } from 'styled-components';
-import { THEME } from '../../../constants/theme';
+
+import { render, renderHook, screen } from '@testing-library/react';
 import React from 'react';
 import { IMovieInfo } from 'src/types/responseTypes';
+import { ThemeProvider } from 'styled-components';
+
+import { THEME } from '../../../constants/theme';
+import { MovieCard } from './MovieCard';
 
 describe('Testing the MovieCard component', () => {
   test('MovieCard component should be in document', () => {

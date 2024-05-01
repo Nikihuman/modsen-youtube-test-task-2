@@ -1,5 +1,6 @@
 import { Ripple } from '@components/Ripple/Ripple';
 import { useMemo } from 'react';
+
 import { StyledMovieCard } from './Styles';
 
 export function MovieSkeletonCards() {

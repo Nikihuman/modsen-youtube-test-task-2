@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components';
-import { SelectorItem } from '@components/SelectorItem/SelectorItem';
 import Icon from '@assets/images/youtube.svg';
+import { SelectorItem } from '@components/SelectorItem/SelectorItem';
+import styled, { css } from 'styled-components';
 
 export const StyledMovieCard = styled.div`
   position: relative;

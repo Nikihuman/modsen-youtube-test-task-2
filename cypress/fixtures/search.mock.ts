@@ -1,4 +1,4 @@
-import { IMovieInfo, IGetMoviesResponse } from '../../src/types/responseTypes';
+import { IGetMoviesResponse, IMovieInfo } from '../../src/types/responseTypes';
 
 export const AVATAR_MOVIE_INFO: IMovieInfo = {
   id: 251733,
