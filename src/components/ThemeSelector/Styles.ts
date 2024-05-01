@@ -29,7 +29,7 @@ export const StyledThemeSelector = styled.div`
     background-color 1s,
     transform 1s;
   ${props =>
-    props.theme['light'] === '#383838' &&
+    props.theme['light'] === 'rgba(56, 56, 56, 1)' &&
     css`
       transform: translateX(25px);
     `}
