@@ -2,7 +2,7 @@ import { render, screen, renderHook } from '@testing-library/react';
 import { MovieCard } from './MovieCard';
 import '@testing-library/jest-dom';
 import { ThemeProvider } from 'styled-components';
-import { THEME } from '../../constants/theme';
+import { THEME } from '../../../constants/theme';
 import React from 'react';
 import { IMovieInfo } from 'src/types/responseTypes';
 

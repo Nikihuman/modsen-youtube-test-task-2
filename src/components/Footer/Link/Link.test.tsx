@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { Link } from './Link';
 import '@testing-library/jest-dom';
 import { ThemeProvider } from 'styled-components';
-import { THEME } from '../../constants/theme';
+import { THEME } from '../../../constants/theme';
 
 test('Testing the Link component', () => {
   render(

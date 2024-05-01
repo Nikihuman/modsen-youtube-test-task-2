@@ -2,7 +2,7 @@ import { render, renderHook, screen } from '@testing-library/react';
 import { ThemeSelector } from './ThemeSelector';
 import '@testing-library/jest-dom';
 import { ThemeProvider } from 'styled-components';
-import { ITheme, THEME } from '../../constants/theme';
+import { ITheme, THEME } from '../../../constants/theme';
 import { Provider } from 'react-redux';
 import { store } from '@store/store';
 import React from 'react';

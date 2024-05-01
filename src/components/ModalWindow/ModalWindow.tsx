@@ -14,7 +14,7 @@ import {
   StyledRipple,
 } from './Styles';
 import { useLazyGetMovieByIdQuery } from '@store/moviesApi';
-import { VideoEmbed } from '@components/VideoEmbed/VideoEmbed';
+import { VideoEmbed } from '@components/ModalWindow/VideoEmbed/VideoEmbed';
 import { PROFESSIONS } from '@constants/others';
 import { INFO_MESSAGES } from '@constants/infoMessages';
 
