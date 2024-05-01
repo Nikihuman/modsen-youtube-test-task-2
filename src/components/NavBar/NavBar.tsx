@@ -15,15 +15,15 @@ import { SelectorItem } from '@components/SelectorItem/SelectorItem';
 
 export function NavBar({ setTheme, ...props }: NavBarProps) {
   const ulRef = useRef<HTMLUListElement>(null);
-  const scroll = useCallback((scrollOffset: number) => {
-    ulRef.current ? (ulRef.current.scrollLeft += scrollOffset) : null;
+
+  const scroll = useCallback((scrollOffset: number, direction: 'left' | 'right') => {
+    return () => {
+      ulRef.current
+        ? (ulRef.current.scrollLeft += direction === 'right' ? scrollOffset : -scrollOffset)
+        : null;
+    };
   }, []);
-  const scrollLeft = useCallback(() => {
-    scroll(-100);
-  }, []);
-  const scrollRight = useCallback(() => {
-    scroll(100);
-  }, []);
+
   return (
     <StyledNavBar {...props}>
       <StyledMainSection>
@@ -32,7 +32,7 @@ export function NavBar({ setTheme, ...props }: NavBarProps) {
         <ThemeSelector setThemFunc={setTheme} />
       </StyledMainSection>
       <StyledGenreSection>
-        <StyledScrollButton $direction="left" onClick={scrollLeft}>
+        <StyledScrollButton $direction="left" onClick={scroll(100, 'left')}>
           {'<'}
         </StyledScrollButton>
         <StyledGenreUl ref={ulRef}>
@@ -42,7 +42,7 @@ export function NavBar({ setTheme, ...props }: NavBarProps) {
             </SelectorItem>
           ))}
         </StyledGenreUl>
-        <StyledScrollButton onClick={scrollRight} $direction="right">
+        <StyledScrollButton onClick={scroll(100, 'right')} $direction="right">
           {'>'}
         </StyledScrollButton>
       </StyledGenreSection>

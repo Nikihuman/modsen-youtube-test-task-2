@@ -1,15 +1,18 @@
 import { useEffect, useMemo, useState } from 'react';
 import {
   StyledIframe,
+  StyledInfo,
+  StyledRipple,
   StyledVideoEmbed,
   VideoSelectorButton,
   VideoSelectorWrapper,
 } from './Styles';
 import { VideoEmbedProps } from './VideoEmbed.props';
-import { Ripple } from '@components/Ripple/Ripple';
+import { INFO_MESSAGES } from '@constants/infoMessages';
 
 export function VideoEmbed({ sources, isActive, ...props }: VideoEmbedProps) {
   const [currentSource, setCurrentSource] = useState<null | string>(null);
+
   const trailersURLs = useMemo(() => {
     if (sources && sources.trailers && sources.trailers.length > 0) {
       const set = new Set(sources.trailers.map(el => el.url));
@@ -19,31 +22,30 @@ export function VideoEmbed({ sources, isActive, ...props }: VideoEmbedProps) {
   }, [sources]);
 
   useEffect(() => {
-    sources && sources.trailers && sources.trailers.length > 0 && isActive
-      ? setCurrentSource(sources.trailers[0].url)
-      : setCurrentSource(null);
+    setCurrentSource(
+      !sources?.trailers?.length && !isActive ? null : sources?.trailers[0]?.url ?? null,
+    );
   }, [sources, isActive]);
+
+  const getVideoIframe = () => {
+    if (!currentSource) {
+      return <StyledInfo>{INFO_MESSAGES.video}</StyledInfo>;
+    }
+    return (
+      <StyledIframe
+        width="100%"
+        height="100%"
+        src={isActive ? `${currentSource}?autoplay=1` : currentSource}
+        allow="accelerometer; autoplay; clipboard-write;"
+        allowFullScreen
+        {...props}
+      />
+    );
+  };
 
   return (
     <>
-      <StyledVideoEmbed>
-        {sources ? (
-          currentSource ? (
-            <StyledIframe
-              width="100%"
-              height="100%"
-              src={isActive ? `${currentSource}?autoplay=1` : currentSource}
-              allow="accelerometer; autoplay; clipboard-write;"
-              allowFullScreen
-              {...props}
-            />
-          ) : (
-            <div style={{ fontSize: '16px' }}>Sorry, we couldn`t load the video 😢 </div>
-          )
-        ) : (
-          <Ripple style={{ margin: 'auto' }} />
-        )}
-      </StyledVideoEmbed>
+      <StyledVideoEmbed>{sources ? getVideoIframe() : <StyledRipple />}</StyledVideoEmbed>
       <VideoSelectorWrapper>
         {trailersURLs
           ? trailersURLs.map((el, i) => (

@@ -1,19 +1,22 @@
-import { useCallback, useEffect, useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 import { ModalWindowProps } from './ModalWindow.props';
 import {
   ModalWindowWrapper,
+  StyledButton,
   StyledDescription,
   StyledDirectorAvatar,
   StyledDirectorAvatarDefault,
+  StyledDirectorInfo,
   StyledDirectorName,
   StyledModalWindow,
   StyledMovieInfo,
   StyledParagraph,
+  StyledRipple,
 } from './Styles';
 import { useLazyGetMovieByIdQuery } from '@store/moviesApi';
-import { Button } from '@components/Button/Button';
 import { VideoEmbed } from '@components/VideoEmbed/VideoEmbed';
-import { Ripple } from '@components/Ripple/Ripple';
+import { PROFESSIONS } from '@constants/others';
+import { INFO_MESSAGES } from '@constants/infoMessages';
 
 export function ModalWindow({ movieIdStateController, ...props }: ModalWindowProps) {
   const [getMovieByIdQuery, { data, isFetching }] = useLazyGetMovieByIdQuery();
@@ -21,7 +24,11 @@ export function ModalWindow({ movieIdStateController, ...props }: ModalWindowPro
   const directorInfo = useMemo(
     () =>
       data && !isFetching
-        ? data.persons.find(el => el.profession === 'режиссер' || el.enProfession === 'director')
+        ? data.persons.find(
+            el =>
+              el.profession === PROFESSIONS.director.rus ||
+              el.enProfession === PROFESSIONS.director.eng,
+          )
         : undefined,
     [isFetching],
   );
@@ -32,43 +39,39 @@ export function ModalWindow({ movieIdStateController, ...props }: ModalWindowPro
     }
   }, [movieIdStateController[0]]);
 
-  const closeVideo = useCallback(() => {
-    movieIdStateController[1](undefined);
-  }, []);
-
   return (
     <ModalWindowWrapper {...props} $active={typeof movieIdStateController[0] !== 'undefined'}>
-      <Button onClick={closeVideo} style={{ position: 'absolute', top: '15px', right: '15px' }}>
+      <StyledButton
+        onClick={() => {
+          movieIdStateController[1](undefined);
+        }}
+      >
         X
-      </Button>
+      </StyledButton>
       <StyledModalWindow>
         <VideoEmbed
           isActive={typeof movieIdStateController[0] !== 'undefined'}
-          sources={data && !isFetching ? data.videos : null}
+          sources={data && !isFetching ? data.videos ?? { trailers: [] } : null}
         />
         <StyledMovieInfo>
-          <div style={{ width: 'fit-content', margin: '0 auto', display: 'flex', gap: '20px' }}>
+          <StyledDirectorInfo>
             {!isFetching && directorInfo ? (
               <StyledDirectorAvatar src={directorInfo?.photo} />
             ) : (
               <StyledDirectorAvatarDefault />
             )}
-            {!isFetching && directorInfo ? (
-              <StyledDirectorName>{directorInfo.enName ?? directorInfo.name}</StyledDirectorName>
-            ) : (
-              'Director Name'
-            )}
-          </div>
+            <StyledDirectorName>
+              {!isFetching && directorInfo
+                ? directorInfo.enName ?? directorInfo.name
+                : 'Director Name'}
+            </StyledDirectorName>
+          </StyledDirectorInfo>
           <StyledDescription>
-            <StyledParagraph>DESCRIPTION:</StyledParagraph>{' '}
+            <StyledParagraph>DESCRIPTION:</StyledParagraph>
             {data && !isFetching ? (
-              data.description ? (
-                <StyledParagraph>{data.description}</StyledParagraph>
-              ) : (
-                <StyledParagraph>{'We`re sorry, we couldn`t find a description😢'}</StyledParagraph>
-              )
+              <StyledParagraph>{data.description ?? INFO_MESSAGES.description}</StyledParagraph>
             ) : (
-              <Ripple style={{ margin: 'auto' }} />
+              <StyledRipple />
             )}
           </StyledDescription>
         </StyledMovieInfo>

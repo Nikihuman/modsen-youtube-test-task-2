@@ -1,6 +1,7 @@
-import { useCallback, useState } from 'react';
+import { useState } from 'react';
 import { MovieCardProps } from './MovieCard.props';
 import {
+  StyledDefaultLogo,
   StyledHover,
   StyledMovieCard,
   StyledMovieGenres,
@@ -10,33 +11,36 @@ import {
   StyledMovieName,
   StyledSelectorItem,
 } from './Styles';
-import { Ripple } from '@components/Ripple/Ripple';
+import { COUNT_OF_GENRES_IN_MOVIE_CARD } from '@constants/others';
 
 export function MovieCard({ info, setMovieId, ...props }: MovieCardProps) {
   const [isLoaded, setIsLoaded] = useState(false);
 
-  const modalWindowController = useCallback(() => {
-    setMovieId(info.id);
-  }, []);
-
-  const onLoadImage = useCallback(() => {
-    setIsLoaded(true);
-  }, []);
-
   return (
     <StyledMovieCard {...props} data-test-id="movie-card-id">
-      <StyledHover onClick={modalWindowController} />
+      <StyledHover
+        onClick={() => {
+          setMovieId(info.id);
+        }}
+      />
       <StyledMovieImageWrapper>
-        <StyledMovieImage $isLoaded={isLoaded} src={info.poster.url} onLoad={onLoadImage} />
-        <Ripple $isLoaded={isLoaded} />
+        <StyledMovieImage
+          alt={`${info.alternativeName ?? info.name} poster`}
+          $isLoaded={isLoaded}
+          src={info.poster.url}
+          onLoad={() => {
+            setIsLoaded(true);
+          }}
+        />
+        <StyledDefaultLogo $isLoaded={isLoaded} />
       </StyledMovieImageWrapper>
       <StyledMovieInfo>
-        <StyledMovieName>
+        <StyledMovieName data-test-id="movie-name-id">
           {info.alternativeName ?? info.name} &#183; {info.year}
         </StyledMovieName>
-        <StyledMovieGenres>
+        <StyledMovieGenres data-test-id="movie-genres-id">
           {info.genres.map((el, i) =>
-            i < 6 ? (
+            i < COUNT_OF_GENRES_IN_MOVIE_CARD ? (
               <StyledSelectorItem genre_name={el.name} key={el.name}>
                 {el.name.toUpperCase()}
               </StyledSelectorItem>

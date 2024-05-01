@@ -1,3 +1,4 @@
+import { Button } from '@components/Button/Button';
 import styled, { createGlobalStyle } from 'styled-components';
 
 export const StyledMainPage = styled.div`
@@ -15,6 +16,11 @@ export const StyledMessage = styled.div`
   font-size: 20px;
   font-weight: 500;
 `;
+
+export const StyledButton = styled(Button)`
+  margin: 50px auto;
+`;
+
 export const Global = createGlobalStyle`
 * {
     margin: 0;

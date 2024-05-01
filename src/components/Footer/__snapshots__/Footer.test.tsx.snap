@@ -12,19 +12,19 @@ exports[`Testing the Footer component: footer snapshot 1`] = `
       class="sc-dmyCSP kdqPzO"
     >
       <a
-        class="sc-jTQCzO ImtPd"
+        class="sc-jTQCzO erxcur"
         href="#"
       >
         TermsPrivacyPolicy & Safety
       </a>
       <a
-        class="sc-jTQCzO ImtPd"
+        class="sc-jTQCzO erxcur"
         href="#"
       >
         How YouTube works
       </a>
       <a
-        class="sc-jTQCzO ImtPd"
+        class="sc-jTQCzO erxcur"
         href="#"
       >
         Test new features
@@ -34,43 +34,43 @@ exports[`Testing the Footer component: footer snapshot 1`] = `
       class="sc-dmyCSP kdqPzO"
     >
       <a
-        class="sc-jTQCzO ImtPd"
+        class="sc-jTQCzO erxcur"
         href="#"
       >
         About
       </a>
       <a
-        class="sc-jTQCzO ImtPd"
+        class="sc-jTQCzO erxcur"
         href="#"
       >
         Press
       </a>
       <a
-        class="sc-jTQCzO ImtPd"
+        class="sc-jTQCzO erxcur"
         href="#"
       >
         Copyright
       </a>
       <a
-        class="sc-jTQCzO ImtPd"
+        class="sc-jTQCzO erxcur"
         href="#"
       >
         Contact us
       </a>
       <a
-        class="sc-jTQCzO ImtPd"
+        class="sc-jTQCzO erxcur"
         href="#"
       >
         Creators
       </a>
       <a
-        class="sc-jTQCzO ImtPd"
+        class="sc-jTQCzO erxcur"
         href="#"
       >
         Advertise
       </a>
       <a
-        class="sc-jTQCzO ImtPd"
+        class="sc-jTQCzO erxcur"
         href="#"
       >
         Developers
@@ -80,25 +80,25 @@ exports[`Testing the Footer component: footer snapshot 1`] = `
       class="sc-hLQSwg eA-DLFL"
     >
       <a
-        class="sc-jTQCzO ImtPd"
+        class="sc-jTQCzO erxcur"
         href="#"
       >
         <linkedin.svg />
       </a>
       <a
-        class="sc-jTQCzO ImtPd"
+        class="sc-jTQCzO erxcur"
         href="#"
       >
         <facebook.svg />
       </a>
       <a
-        class="sc-jTQCzO ImtPd"
+        class="sc-jTQCzO erxcur"
         href="#"
       >
         <instagram.svg />
       </a>
       <a
-        class="sc-jTQCzO ImtPd"
+        class="sc-jTQCzO erxcur"
         href="#"
       >
         <twitter.svg />
@@ -106,7 +106,7 @@ exports[`Testing the Footer component: footer snapshot 1`] = `
     </div>
   </section>
   <section
-    class="sc-eDLKkx bZCbxg"
+    class="sc-eDLKkx cXnbja"
   >
     2023 Modsen company
   </section>

@@ -7,11 +7,12 @@ import { MovieContext } from '@context/movie.context';
 
 export function MoviesGrid({ movieIdStateController, ...props }: MoviesGridProps) {
   const { movies, isFetching } = useContext(MovieContext);
+
   return (
     <StyledMoviesGrid {...props}>
       {movies.length != 0
-        ? movies.map(el => (
-            <MovieCard setMovieId={movieIdStateController[1]} key={el.id} info={el} />
+        ? movies.map((el, i) => (
+            <MovieCard setMovieId={movieIdStateController[1]} key={el.id + i} info={el} />
           ))
         : null}
       {isFetching ? <MovieSkeletonCards /> : null}

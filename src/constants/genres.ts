@@ -1,6 +1,6 @@
 export const GENRES = [
   {
-    name: 'all',
+    name: 'все',
     slug: 'all',
   },
   {
