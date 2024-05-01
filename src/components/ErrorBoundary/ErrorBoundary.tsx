@@ -1,4 +1,5 @@
 import { Component, ReactNode } from 'react';
+import { StyledWrapperMessage } from './Styles';
 
 interface Props {
   children?: ReactNode;
@@ -19,11 +20,7 @@ export class ErrorBoundary extends Component<Props, State> {
 
   public override render() {
     if (this.state.hasError) {
-      return (
-        <div style={{ backgroundColor: 'red', height: '100px', minWidth: '100px' }}>
-          Sorry.. there was an error
-        </div>
-      );
+      return <StyledWrapperMessage>Sorry.. there was an error</StyledWrapperMessage>;
     }
 
     return this.props.children;
