@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { VideoEmbed } from './VideoEmbed';
 import '@testing-library/jest-dom';
 import { ThemeProvider } from 'styled-components';
-import { THEME } from '../../constants/theme';
+import { THEME } from '../../../constants/theme';
 import { Provider } from 'react-redux';
 import { store } from '@store/store';
 import { Videos } from 'src/types/responseTypes';

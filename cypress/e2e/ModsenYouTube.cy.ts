@@ -43,7 +43,7 @@ describe('Testing ModsenYouTube', () => {
     cy.visit('http://localhost:8080/');
     cy.intercept('GET', BASE_URL + SEARCH_BY_GENRE_PATH(1, currentGenre, 16), req => {
       req.reply({ body: GENRE_MOCK, statusCode: 200 });
-    }).as('searchByName');
+    }).as('searchByGenre');
     cy.get(`[data-test-id="${currentGenre}"]`).click();
     cy.get('[data-test-id="movie-genres-id"]').each(value => {
       cy.wrap(value).contains(`${currentGenre.toUpperCase()}`);

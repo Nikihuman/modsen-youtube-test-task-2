@@ -6,7 +6,7 @@ import {
   StyledLinksWrapper,
   StyledSocialLinksBlock,
 } from './Styles';
-import { Link } from '@components/Link/Link';
+import { Link } from '@components/Footer/Link/Link';
 import { FooterProps } from './Footer.props';
 
 export function Footer({ ...props }: FooterProps) {

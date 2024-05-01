@@ -5,9 +5,9 @@ import {
   StyledScrollButton,
   StyledGenreSection,
 } from './Styled';
-import { Search } from '@components/Search/Search';
-import { Logo } from '@components/Logo/Logo';
-import { ThemeSelector } from '@components/ThemeSelector/ThemeSelector';
+import { Search } from '@components/NavBar/Search/Search';
+import { Logo } from '@components/NavBar/Logo/Logo';
+import { ThemeSelector } from '@components/NavBar/ThemeSelector/ThemeSelector';
 import { NavBarProps } from './NavBar.props';
 import { GENRES } from '@constants/genres';
 import { useCallback, useRef } from 'react';

@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { MovieSkeletonCards } from './MovieSkeletonCards';
 import '@testing-library/jest-dom';
 import { ThemeProvider } from 'styled-components';
-import { THEME } from '../../constants/theme';
+import { THEME } from '../../../constants/theme';
 
 describe('Testing the MovieSkeletonCards component', () => {
   test('MovieCard component should be in document', () => {
