@@ -8,11 +8,14 @@ export const StyledSearchWrapper = styled.form`
   width: 100%;
   margin: 0 15px;
   position: relative;
-  &:focus-within,
-  &:hover {
+  &:focus-within {
     section:first-of-type {
-      display: flex;
       box-shadow: 0px 0px 10px ${props => props.theme['text_dark']};
+      height: 300px;
+    }
+    p:first-of-type {
+      display: block;
+      height: fit-content;
     }
     box-shadow: 0px 3px 10px ${props => props.theme['text_dark']};
   }
@@ -26,26 +29,13 @@ export const StyledMoviesNames = styled.section`
   position: absolute;
   width: 100%;
   top: 50px;
-  min-height: 50px;
-  max-height: 300px;
-  display: none;
+  height: 0px;
+  transition: height 500ms;
+  display: flex;
   z-index: 4;
   border: 1px solid ${props => props.theme['border_dark']};
   border-top: none;
   flex-direction: column;
-  &::before {
-    content: '';
-    height: 7px;
-    width: calc(100% + 2px);
-    position: absolute;
-    top: -7px;
-    left: -0.85px;
-    background: inherit;
-    z-index: 2;
-    box-sizing: border-box;
-    border-left: 1px solid ${props => props.theme['border_dark']};
-    border-right: 1px solid ${props => props.theme['border_dark']};
-  }
 `;
 export const StyledLoupeImg = styled(Icon)`
   width: 17px;
@@ -94,8 +84,7 @@ export const StyledUl = styled.ul`
 `;
 
 export const StyledInfo = styled.p`
-  overflow-y: scroll;
-  display: block;
   width: fit-content;
   margin: auto;
+  display: none;
 `;
